@@ -6,19 +6,24 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Clispot Docs',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kumneger0/clispot' }],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Core',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Installation', slug: 'core/installation' },
+						{ label: 'Configuration', slug: 'core/configuration' },
+						{ label: 'Features', slug: 'core/features' },
+						{ label: 'Usage', slug: 'core/usage' },
+						{ label: 'Troubleshooting', slug: 'core/troubleshooting' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'VS Code Extension',
+					items: [
+						{ label: 'Quickstart', slug: 'vscode-extension/quickstart' },
+					],
 				},
 			],
 		}),
