@@ -8,6 +8,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     integrations: [starlight({
         title: 'Clispot Docs',
+        logo: {
+            src: './public/logo.png',
+        },
         social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kumneger0/clispot' }],
         sidebar: [
             {
