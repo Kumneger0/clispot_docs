@@ -1,28 +1,64 @@
 ---
-title: Welcome to Clispot
-description: Get started building your docs site with Starlight.
+title: Clispot
+description: Control Spotify from your terminal and IDE with powerful CLI and VS Code integration
 template: splash
 hero:
-  tagline: Documentation for Clispot Core and VS Code Extension
+  tagline: Your favorite music, right where you code. Control Spotify seamlessly from your terminal or VS Code.
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Core Guide
+    - text: Get Started
       link: /core/installation/
       icon: right-arrow
       variant: primary
-    - text: VS Code Extension
+    - text: Install Extension
       link: /vscode-extension/quickstart/
       icon: external
+      variant: secondary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-<CardGrid>
-	<Card title="Core Documentation" icon="pencil">
-		Learn how to use the [Clispot CLI](/core/installation/).
+:::note[Before You Start]
+Clispot requires **Spotify Developer credentials** to work. You'll need to create a free Spotify Developer app and set up your Client ID and Secret as environment variables. Don't worry—it only takes a few minutes!
+
+[See setup instructions →](/core/configuration/)
+:::
+
+## Why Clispot?
+
+<CardGrid stagger>
+	<Card title="🎵 Terminal Native" icon="laptop">
+		Control Spotify directly from your command line. Play, pause, skip tracks, and manage playlists without leaving your terminal.
 	</Card>
-	<Card title="VS Code Extension" icon="add-document">
-		Get started with the [Clispot VS Code Extension](/vscode-extension/quickstart/).
+	<Card title="🎨 IDE Integration" icon="puzzle">
+		Seamless VS Code extension brings your Spotify library into your editor. Browse playlists, search tracks, and control playback without context switching.
 	</Card>
 </CardGrid>
+
+## Choose Your Workflow
+
+<CardGrid>
+	<Card title="Core CLI" icon="seti:shell">
+		**Perfect for terminal enthusiasts**
+		
+		Use Clispot as a standalone CLI tool. Control playback, manage playlists, and search your library—all from the command line.
+		
+		[Installation Guide →](/core/installation/)
+	</Card>
+	<Card title="VS Code Extension" icon="seti:config">
+		**For developers who live in their editor**
+		
+		Bring your entire Spotify experience into VS Code. Browse, search, and play music without ever leaving your workspace.
+		
+		[Quickstart Guide →](/vscode-extension/quickstart/)
+	</Card>
+</CardGrid>
+
+## Interactive UI
+
+Clispot provides a beautiful, interactive terminal interface for browsing and controlling your Spotify library.
+
+![Clispot Interactive Terminal UI](/example.png)
+
+Ready to transform your music workflow? [Get started →](/core/installation/)
