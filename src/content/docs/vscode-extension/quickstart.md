@@ -7,7 +7,13 @@ description: Get started with the Clispot VS Code Extension.
 
 Before using the extension, ensure you have completed the following steps:
 
+
+
 1.  **Install Clispot CLI**: Download the latest release from [GitHub](https://github.com/kumneger0/clispot/releases/latest).
+    :::caution[Version Requirement]
+    The extension requires Clispot CLI **v0.4.0** or newer. Please upgrade if you are using an older version.
+    :::
+
 2.  **Configure Credentials**: You **must** set up a Spotify Developer Application and export your `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET`. See the [Configuration Guide](/core/configuration) for instructions.
 3.  **Authenticate**: On the first run, Clispot will open your browser to authenticate with your Spotify account. This is a one-time process.
 
