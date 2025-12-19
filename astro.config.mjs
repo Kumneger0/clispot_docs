@@ -8,7 +8,7 @@ export default defineConfig({
     integrations: [starlight({
         title: 'Clispot Docs',
         logo: {
-            src: './public/logo.png',
+            src: './src/assets/logo.png',
         },
         favicon: '/favicon.png',
         social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kumneger0/clispot' }],
