@@ -6,12 +6,13 @@ description: Common issues and fixes.
 ### Common Issues
 
 **Music doesn't play**
-* Check that `yt-dlp` and `ffmpeg` are installed and in your PATH
-* Verify your internet connection
 * Check debug log files: `ytstderr.log` and `ffstderr.log`
-  * If you specified a debug directory with `-d`, logs are in that directory
-  * Otherwise, logs are in `~/.clispot/logs` directory
+  * If you specified a debug directory with `-d`, logs are in that directory or if you set it in config file which is at $XDG_CONFIG_HOME/clispot/config.json
+  * Otherwise, logs are in $XDG_STATE_HOME/clispot/logs
 
-**Authentication fails**
-* Ensure port 9292 is not blocked by a firewall
-* Check that your browser can open automatically (or manually open the URL shown)
+**yt-dlp or ffmpeg not found**
+* Make sure you have yt-dlp and ffmpeg installed and in your PATH
+
+**yt-dlp slow download**
+* yt-dlp is sometimes slow to download audio files, if have slow internet connection we don't have anything to help you with that
+

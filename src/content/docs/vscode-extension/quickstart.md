@@ -35,11 +35,15 @@ Access your Spotify library directly from the sidebar. You can view:
 - **Playlists**: Browse and play your saved playlists.
 - **Saved Tracks**: Access your liked songs.
 - **Followed Artists**: Browse your favorite artists.
+- **Albums**: Browse your favorite albums.
+- **Search**: Search for tracks, artists, playlists and albums.
 
 ### Queue Management
 Manage your music queue directly from the interface:
 - **Add to Queue**: Hover over any track in a list and click the <kbd>+</kbd> (plus) icon to add it to your queue.
 - **Remove from Queue**: In the Queue view, hover over a track and click the <kbd>-</kbd> (minus) icon to remove it.
+
+![Clispot VS Code Extension showing Queue Management](../../../assets/clispot_vs_code_extension.png)
 
 ### Playback Control
 - **Status Bar**: Shows the currently playing track and time. Click to toggle play/pause.
