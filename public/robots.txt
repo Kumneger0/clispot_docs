@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clispot.kumneger.com/sitemap-index.xml
