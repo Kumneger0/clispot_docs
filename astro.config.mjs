@@ -6,7 +6,8 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
     integrations: [starlight({
-        title: 'Clispot Docs',
+        title: 'Clispot',
+        description: 'Listen to your Spotify Library from the CLI',
         logo: {
             src: './src/assets/logo.png',
         },
