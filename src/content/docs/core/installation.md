@@ -16,7 +16,7 @@ Download the latest release from the [GitHub releases page](https://github.com/k
 
 For other operating systems, please build from source.
 
-### Using Docker
+<!-- ### Using Docker
 
 If you prefer not to install dependencies like Go or `yt-dlp` directly on your system, you can run Clispot using Docker.
 
@@ -41,5 +41,5 @@ To avoid typing the full command every time, add this alias to your shell config
 alias clispot='docker run -it -e SPOTIFY_CLIENT_ID=$SPOTIFY_CLIENT_ID -e SPOTIFY_CLIENT_SECRET=$SPOTIFY_CLIENT_SECRET kumneger0/clispot:latest'
 ```
 
-Now you can simply run `clispot` from your terminal!
+Now you can simply run `clispot` from your terminal! -->
 
