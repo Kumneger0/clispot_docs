@@ -3,43 +3,20 @@ title: Installation
 description: How to install Clispot.
 ---
 
+:::caution[Early Development Notice]
+Clispot is currently in early development. Expect bugs and breaking changes.
+:::
+
 ### Prerequisites
 
 **Required:**
-* Go 1.25 or higher (if building from source)
 * [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) - YouTube downloader for audio playback
 * [`ffmpeg`](https://ffmpeg.org/) - Audio conversion
 
 ### From GitHub Releases
 
-Download the latest release from the [GitHub releases page](https://github.com/kumneger0/clispot/releases). **Note:** Pre-built binaries are currently only available for Linux AMD64 architectures. Extract the archive for your architecture and place the `clispot` executable in a directory in your PATH (e.g., `/usr/local/bin`).
+We offer pre-built binaries for major operating systems including Linux, Windows, and macOS. Download the latest release from the [GitHub releases page](https://github.com/kumneger0/clispot/releases). If you cannot find a binary for your operating system and CPU architecture, please build from source.
 
-For other operating systems, please build from source.
+### Build from Source
 
-<!-- ### Using Docker
-
-If you prefer not to install dependencies like Go or `yt-dlp` directly on your system, you can run Clispot using Docker.
-
-#### 1. Pull the Image
-```bash
-docker pull kumneger0/clispot:latest
-```
-
-#### 2. Run the Container
-Pass your Spotify credentials as environment variables from your host:
-```bash
-docker run -it \
-  -e SPOTIFY_CLIENT_ID=$SPOTIFY_CLIENT_ID \
-  -e SPOTIFY_CLIENT_SECRET=$SPOTIFY_CLIENT_SECRET \
-  kumneger0/clispot:latest
-```
-
-#### 3. Create an Alias (Recommended)
-To avoid typing the full command every time, add this alias to your shell configuration (e.g., `~/.bashrc` or `~/.zshrc`):
-
-```bash
-alias clispot='docker run -it -e SPOTIFY_CLIENT_ID=$SPOTIFY_CLIENT_ID -e SPOTIFY_CLIENT_SECRET=$SPOTIFY_CLIENT_SECRET kumneger0/clispot:latest'
-```
-
-Now you can simply run `clispot` from your terminal! -->
-
+If you wish to build from source, please verify the [installation guide](https://github.com/Kumneger0/clispot/blob/main/docs/install.md).
