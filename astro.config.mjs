@@ -1,8 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel';
+
 
 export default defineConfig({
     integrations: [starlight({
@@ -34,4 +35,6 @@ export default defineConfig({
             },
         ],
 		}), sitemap()],
+    output: 'static',
+    adapter: vercel(),
 });
