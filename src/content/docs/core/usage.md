@@ -123,7 +123,7 @@ clispot uses a three-panel layout:
 | `k` / `↑` | Move up in list |
 | `l` | Like/Unlike a song |
 | `a` | Add song to queue |
-| `d` | Remove song from queue |
+| `r` | Remove song from queue |
 | `Enter` | Context-dependent action (play/load) |
 | `Space` | Play/pause current track |
 | `n` | Next track |
