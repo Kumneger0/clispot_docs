@@ -4,10 +4,11 @@ import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 
-
 export default defineConfig({
+    site: 'https://clispot.kumneger.dev',
     integrations: [starlight({
         title: 'Clispot',
+
         description: 'Listen to your Spotify Library from the CLI',
         logo: {
             src: './src/assets/logo.png',
@@ -34,7 +35,7 @@ export default defineConfig({
                 ],
             },
         ],
-		}), sitemap()],
+    }), sitemap()],
     output: 'static',
     adapter: vercel(),
 });
