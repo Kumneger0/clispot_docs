@@ -21,19 +21,49 @@ Before using Clispot, you must create a Spotify Developer application and config
 
 ### Step 2: Configure Environment Variables
 
-Set your Spotify credentials as environment variables. Add the following lines to your shell's configuration file (e.g., `.bashrc`, `.zshrc`, or `.profile`):
+#### Linux / macOS
+
+Add the following lines to your shell's configuration file (e.g., `.bashrc`, `.zshrc`, or `.profile`):
 
 ```bash
 export SPOTIFY_CLIENT_ID="<your-client-id>"
 export SPOTIFY_CLIENT_SECRET="<your-client-secret>"
 ```
 
-Replace `<your-client-id>` and `<your-client-secret>` with the actual credentials from your Spotify application.
-
 After adding these lines, reload your shell configuration:
 
 ```bash
-source ~/.bashrc  # or ~/.zshrc, depending on your shell
+source ~/.bashrc  # or ~/.zshrc
+```
+
+### Windows
+
+#### PowerShell
+
+To set them for the current session:
+```powershell
+$env:SPOTIFY_CLIENT_ID="<your-client-id>"
+$env:SPOTIFY_CLIENT_SECRET="<your-client-secret>"
+```
+
+To make them permanent (User level):
+```powershell
+[System.Environment]::SetEnvironmentVariable('SPOTIFY_CLIENT_ID', '<your-client-id>', 'User')
+[System.Environment]::SetEnvironmentVariable('SPOTIFY_CLIENT_SECRET', '<your-client-secret>', 'User')
+```
+
+#### Command Prompt (cmd)
+
+To set them for the current session:
+```cmd
+set SPOTIFY_CLIENT_ID=<your-client-id>
+set SPOTIFY_CLIENT_SECRET=<your-client-secret>
+```
+
+To make them permanent:
+```cmd
+setx SPOTIFY_CLIENT_ID "<your-client-id>"
+setx SPOTIFY_CLIENT_SECRET "<your-client-secret>"
 ```
 
 > **Note:** Without these credentials, Clispot will not be able to authenticate with Spotify.
@@ -49,6 +79,7 @@ Here is an example of a complete `config.json` file:
 ```json
 {
   "debug-dir": "/home/user/.local/state/clispot/logs",
+  "cache-dir": "/home/user/.cache/clispot",
   "disable-cache": false,
   "yt-dlp-args": {
     "cookies-from-browser": "firefox",
@@ -61,8 +92,8 @@ Here is an example of a complete `config.json` file:
 
 Clispot applies configuration in the following order of precedence (highest to lowest):
 
-1.  **Command Line Flags:** Options passed directly to the `clispot` command (e.g., `--debug-dir`, `--headless`).
-2.  **Configuration File:** Settings defined in `~/.config/clispot/config.json`.
+1.  **Command Line Flags:** Options passed directly to the `clispot` command (e.g., `--debug-dir`, `--cache-dir`, `--headless`).
+2.  **Configuration File:** Settings defined in `~/.config/clispot/config.json` (Linux), `%AppData%\clispot\config.json` (Windows), or `~/Library/Application Support/clispot/config.json` (macOS).
 3.  **Defaults:** Hardcoded application defaults.
 
 This means if you have `headless-mode: true` in your config file but run `clispot --headless=false`, the application will start in normal mode.
@@ -73,20 +104,22 @@ On first run, clispot will:
 1. Start a local web server on port 9292
 2. Open your default browser to Spotify's authorization page
 3. Ask you to authorize the application
-4. Save the authentication token to `~/.config/clispot/token.json`
+4. Save the authentication token to your configuration directory (e.g., `~/.config/clispot/token.json` or `%AppData%\clispot\token.json`)
 
 The token is automatically refreshed when needed. You only need to authenticate once (unless you revoke it).
 
 ### File Locations
 
-* **Config:** (Found in `$XDG_CONFIG_HOME`, defaults to `~/.config`)
-  * `~/.config/clispot/token.json` - Stores Spotify authentication token
-  * `~/.config/clispot/config.json` - Application settings (optional)
-* **Debug logs:** (Found in `$XDG_STATE_HOME`, defaults to `~/.local/state`)
-  * `ytstderr.log` - YouTube downloader error logs
-  * `ffstderr.log` - FFmpeg conversion error logs
+* **Config:** (Found in `$XDG_CONFIG_HOME`, defaults to `~/.config` on Linux, `%AppData%` on Windows, `~/Library/Application Support` on macOS)
+  * `clispot/token.json` - Stores Spotify authentication token
+  * `clispot/config.json` - Application settings (optional)
+* **Cache:** (Found in `$XDG_CACHE_HOME`, defaults to `~/.cache` on Linux, `%LocalAppData%` on Windows, `~/Library/Caches` on macOS)
+  * `clispot/yt-audio/` - Cached audio files from YouTube
+* **Debug logs:** (Found in `$XDG_STATE_HOME`, defaults to `~/.local/state` on Linux, `%AppData%` on Windows, `~/.local/state` on macOS)
+  * `clispot/logs/ytstderr.log` - YouTube downloader error logs
+  * `clispot/logs/ffstderr.log` - FFmpeg conversion error logs
   * Log location depends on the `-d` flag:
     * If `-d <path>` is specified: logs are saved in that directory
-    * If not specified: logs are saved in `~/.local/state/clispot/logs` directory
+    * If not specified: logs are saved in `~/.local/state/clispot/logs` (Linux/macOS) or `%AppData%\clispot\logs` (Windows).
 
 These logs can be useful for troubleshooting playback issues and reporting bugs.

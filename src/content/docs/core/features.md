@@ -23,16 +23,16 @@ description: Overview of Clispot features.
   * Automatic track progression
 
 * **Integration**
-  * MPRIS2 support for media key control (play/pause, next, previous)
+ - **MPRIS Support** (Linux only): Control playback using your system's media controls or other MPRIS clients. (Windows and macOS support coming soon)
   * Works with system media key shortcuts
 
 * **Caching**
   * Caches YouTube audio streams for played tracks so next time when you play same song it plays from cache.
 
 * **Lyrics Display**
-  * View lyrics for the currently playing music. To enable this feature, install the `clispot-lyrics` tool globally from [https://github.com/Kumneger0/clispot-lyrics](https://github.com/Kumneger0/clispot-lyrics). Note that the downloaded binary might have a suffix indicating the OS and CPU architecture (e.g., `clispot-lyrics-linux-aarch64`). You must rename this binary to `clispot-lyrics` for clispot to correctly detect it. Once installed, clispot will automatically provide an option to open lyrics for the selected music.
+  * View lyrics for the currently playing music. To enable this feature, install the `clispot-lyrics` tool globally from our [github repository](https://github.com/Kumneger0/clispot-lyrics). Note that the downloaded binary might have a suffix indicating the OS and CPU architecture (e.g., `clispot-lyrics-linux-aarch64`). You must rename this binary to `clispot-lyrics` for clispot to correctly detect it. Once installed, clispot will automatically provide an option to open lyrics for the selected music.
 
-### MPRIS Integration
+### MPRIS Integration (Linux Only)
 
 clispot implements MPRIS2, allowing integration with:
 * Desktop environments that support media keys

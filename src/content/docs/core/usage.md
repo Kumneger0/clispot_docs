@@ -14,9 +14,11 @@ The application will check for authentication and prompt you if needed.
 
 **Command-line Options:**
 * `-d, --debug-dir <path>` - Specify a directory where debug logs will be saved. The logs `ytstderr.log` and `ffstderr.log` will be created in this directory. If not specified, logs are saved in `~/.clispot/logs` directory.
+* `-c, --cache-dir <path>` - Specify a directory where cached audio files will be saved. Defaults to `~/.cache/clispot` (Linux), `%Appdata%/clispot/cache` (Windows), or `~/Library/Caches/clispot` (macOS).
 * `--disable-cache` - Disable caching of YouTube audio streams. When this flag is used, audio streams will not be saved to disk. Defaults to `false` (caching is enabled by default).
 * `--cookies-from-browser <browser_name[:profile]>` - Pass cookies from the specified browser to `yt-dlp`. This is useful for accessing age-restricted content or content that requires login.
 * `--cookies <filepath>` - Pass cookies from a specified file to `yt-dlp`. The file should be in Netscape cookie file format.
+* `--headless` - Run clispot in headless mode, providing an API endpoint to build custom UIs. Our [vscode extension](/vscode-extension/quickstart) uses this feature.
 
 
 Example:

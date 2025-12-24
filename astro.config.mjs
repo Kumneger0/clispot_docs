@@ -22,6 +22,7 @@ export default defineConfig({
                     { label: 'Configuration', slug: 'core/configuration' },
                     { label: 'Features', slug: 'core/features' },
                     { label: 'Usage', slug: 'core/usage' },
+                    { label: 'Headless Mode', slug: 'core/headless' },
                     { label: 'Troubleshooting', slug: 'core/troubleshooting' },
                 ],
             },
