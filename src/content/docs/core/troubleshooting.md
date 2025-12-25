@@ -7,8 +7,14 @@ description: Common issues and fixes.
 
 **Music doesn't play**
 * Check debug log files: `ytstderr.log` and `ffstderr.log`
-  * If you specified a debug directory with `-d`, logs are in that directory or if you set it in config file which is at $XDG_CONFIG_HOME/clispot/config.json
-  * Otherwise, logs are in $XDG_STATE_HOME/clispot/logs
+  * If you specified a debug directory with `-d`, logs are in that directory.
+  * If you set it in the config file:
+    * **Linux:** `~/.config/clispot/config.json`
+    * **Windows:** `%AppData%\clispot\config.json`
+    * **macOS:** `~/Library/Application Support/clispot/config.json`
+  * Otherwise, logs are in the default location:
+    * **Linux/macOS:** `~/.local/state/clispot/logs` (or `$XDG_STATE_HOME/clispot/logs`)
+    * **Windows:** `%AppData%\clispot\logs`
 
 **yt-dlp or ffmpeg not found**
 * Make sure you have yt-dlp and ffmpeg installed and in your PATH

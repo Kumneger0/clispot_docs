@@ -7,6 +7,9 @@ description: Get started with the Clispot VS Code Extension.
 
 Before using the extension, ensure you have completed the following steps:
 
+:::caution[Single Instance Requirement]
+Clispot cannot run multiple instances simultaneously. **You must close any other running `clispot` processes** (e.g., in your terminal) before using the extension.
+:::
 
 
 1.  **Install Clispot CLI**: Download the latest release from [GitHub](https://github.com/kumneger0/clispot/releases/latest).
@@ -60,4 +63,4 @@ Manage your music queue directly from the interface:
 ## Troubleshooting
 
 - **"Clispot is not installed"**: Ensure the `clispot` binary is in your system PATH.
-- **Server issues**: The extension runs `clispot --headless` in a background terminal. If issues persist, try restarting VS Code.
+- **Server issues**: The extension runs `clispot --headless` in a background terminal. If the extension fails to start the backend automatically, try running `clispot --headless` manually in your terminal before using the extension. If issues persist, try restarting VS Code.
