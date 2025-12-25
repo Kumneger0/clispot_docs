@@ -1,48 +1,49 @@
-# Starlight Starter Kit: Basics
+# Clispot Documentation
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Official documentation for Clispot, a CLI-based Spotify client. Built with [Starlight](https://starlight.astro.build/) and [Astro](https://astro.build/).
 
-```
-pnpm create astro@latest -- --template starlight
-```
+Live at: [clispot.kumneger.dev](https://clispot.kumneger.dev)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Getting Started
 
-## 🚀 Project Structure
+### Prerequisites
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+- [pnpm](https://pnpm.io/) installed locally.
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+### Local Development
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Kumneger0/clispot_docs.git
+   cd clispot_docs
+   ```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+2. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   pnpm dev
+   ```
+   The site will be available at `http://localhost:4321`.
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+| Command | Action |
+| :--- | :--- |
+| `pnpm dev` | Starts local dev server at `localhost:4321` |
+| `pnpm build` | Build your production site to `./dist/` |
+| `pnpm preview` | Preview your build locally, before deploying |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`            | Installs dependencies                            |
-| `pnpm dev`                | Starts local dev server at `localhost:4321`      |
-| `pnpm build`              | Build your production site to `./dist/`          |
-| `pnpm preview`            | Preview your build locally, before deploying     |
-| `pnpm astro ...`          | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help`    | Get help using the Astro CLI                     |
+## 🤝 Contributing
 
-## 👀 Want to learn more?
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for more details.
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- Content is located in `src/content/docs/`.
+- Sidebar configuration is in `astro.config.mjs`.
+
+## 📄 License
+
+This project is licensed under the MIT License.
