@@ -110,16 +110,16 @@ The token is automatically refreshed when needed. You only need to authenticate 
 
 ### File Locations
 
-* **Config:** (Found in `$XDG_CONFIG_HOME`, defaults to `~/.config` on Linux, `%AppData%` on Windows, `~/Library/Application Support` on macOS)
+* **Config:** (Respects `XDG_CONFIG_HOME` on Linux/macOS, defaults to `~/.config` on Linux, `%AppData%` on Windows, `~/Library/Application Support` on macOS)
   * `clispot/token.json` - Stores Spotify authentication token
   * `clispot/config.json` - Application settings (optional)
-* **Cache:** (Found in `$XDG_CACHE_HOME`, defaults to `~/.cache` on Linux, `%LocalAppData%` on Windows, `~/Library/Caches` on macOS)
+* **Cache:** (Respects `XDG_CACHE_HOME` on Linux, defaults to `~/.cache` on Linux, `%LocalAppData%` on Windows, `~/Library/Caches` on macOS)
   * `clispot/yt-audio/` - Cached audio files from YouTube
-* **Debug logs:** (Found in `$XDG_STATE_HOME`, defaults to `~/.local/state` on Linux, `%AppData%` on Windows, `~/.local/state` on macOS)
+* **Debug logs (State):** (Respects `XDG_STATE_HOME` on Linux, defaults to `~/.local/state` on Linux, `%AppData%` on Windows, `~/Library/State` on macOS)
   * `clispot/logs/ytstderr.log` - YouTube downloader error logs
   * `clispot/logs/ffstderr.log` - FFmpeg conversion error logs
   * Log location depends on the `-d` flag:
     * If `-d <path>` is specified: logs are saved in that directory
-    * If not specified: logs are saved in `~/.local/state/clispot/logs` (Linux/macOS) or `%AppData%\clispot\logs` (Windows).
+    * If not specified: logs are saved in `~/.local/state/clispot/logs` (Linux), `~/Library/State/clispot/logs` (macOS), or `%AppData%\clispot\logs` (Windows).
 
 These logs can be useful for troubleshooting playback issues and reporting bugs.
