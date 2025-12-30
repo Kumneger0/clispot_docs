@@ -13,10 +13,29 @@ Clispot is currently in early development. Expect bugs and breaking changes.
 * [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) - YouTube downloader for audio playback
 * [`ffmpeg`](https://ffmpeg.org/) - Audio conversion
 
-### From GitHub Releases
+### Quick Install
 
-We offer pre-built binaries for major operating systems including Linux, Windows, and macOS. Download the latest release from the [GitHub releases page](https://github.com/kumneger0/clispot/releases). If you cannot find a binary for your operating system and CPU architecture, please build from source.
+The easiest way to install Clispot is using the official installation scripts.
 
-### Build from Source
+#### Linux and macOS
+```bash
+curl -fsSL https://raw.githubusercontent.com/kumneger0/clispot/main/install.sh | sh
+```
 
+#### Windows (PowerShell)
+```powershell
+iwr -useb https://raw.githubusercontent.com/kumneger0/clispot/main/install.ps1 | iex
+```
+
+:::note
+The installation scripts will automatically download the correct binary for your system and add Clispot to your `PATH`.
+:::
+
+### Manual Installation
+
+#### From GitHub Releases
+We offer pre-built binaries for major operating systems including Linux, Windows, and macOS. Download the latest release from the [GitHub releases page](https://github.com/kumneger0/clispot/releases).
+
+#### Build from Source
 If you wish to build from source, please verify the [installation guide](https://github.com/Kumneger0/clispot/blob/main/docs/install.md).
+
