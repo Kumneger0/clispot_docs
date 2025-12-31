@@ -7,8 +7,8 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
     site: 'https://clispot.kumneger.dev',
     integrations: [starlight({
-        title: 'Clispot',
 
+        title: 'Clispot',
         description: 'Listen to your Spotify Library from the CLI',
         logo: {
             src: './src/assets/logo.png',
@@ -37,5 +37,9 @@ export default defineConfig({
         ],
     }), sitemap()],
     output: 'static',
-    adapter: vercel(),
+    adapter: vercel({
+        webAnalytics: {
+            enabled: true
+        }
+    }),
 });
