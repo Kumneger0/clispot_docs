@@ -1,0 +1,12 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/layouts/BaseLayout.astro';
+import { Analytics } from '@vercel/analytics/astro';
+---
+
+<Default {...Astro.props}>
+	<Fragment slot="head">
+		<Analytics />
+	</Fragment>
+	<slot />
+</Default>
