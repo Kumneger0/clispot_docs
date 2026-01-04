@@ -27,6 +27,10 @@ curl -fsSL https://raw.githubusercontent.com/kumneger0/clispot/main/install.sh |
 iwr -useb https://raw.githubusercontent.com/kumneger0/clispot/main/install.ps1 | iex
 ```
 
+:::tip
+For the best experience on Windows, we recommend using **[Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)**. Standard Command Prompt and PowerShell may experience UI flickering issues.
+:::
+
 :::note
 The installation scripts will automatically download the correct binary for your system and add Clispot to your `PATH`.
 :::

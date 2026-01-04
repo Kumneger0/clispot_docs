@@ -22,3 +22,8 @@ description: Common issues and fixes.
 **yt-dlp slow download**
 * yt-dlp is sometimes slow to download audio files, if have slow internet connection we don't have anything to help you with that
 
+**TerminateProcess: access denied(windows)**
+* This typically occurs when you lack the necessary permissions to end a process, try opening the Command Prompt or PowerShell as an Administrator.
+
+**UI Flickering (Windows)**
+* If you experience UI flickering in the terminal, we recommend using **Windows Terminal** instead of the legacy Command Prompt or PowerShell.
