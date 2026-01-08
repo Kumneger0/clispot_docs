@@ -14,7 +14,7 @@ Before using Clispot, you must create a Spotify Developer application and config
 3. Give your application a name and description.
 4. Find the **"Redirect URIs"** section and add the following URI:
    ```
-   http://127.0.0.1:9292
+   http://127.0.0.1:9292/callback
    ```
 5. Save your changes.
 6. Now, view your application's settings and find your **Client ID** and **Client Secret**.
