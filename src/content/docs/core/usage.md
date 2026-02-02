@@ -41,6 +41,37 @@ Example using cookies from a file:
 clispot --cookies ~/my_cookies.txt
 ```
 
+### Dependency Management
+
+Clispot requires external dependencies (FFmpeg and yt-dlp) to function correctly. You can easily install or update these dependencies using the `install` command.
+
+**Usage:**
+```bash
+clispot install [flags]
+```
+
+**Flags:**
+*   `--ffmpeg-only` - Installs only FFmpeg and FFprobe. If they already exist, it updates them to the latest version if needed.
+*   `--yt-dlp-only` - Installs only yt-dlp. If it already exists, it updates it to the latest version if needed.
+
+If no flags are provided, the command installs (or updates) both FFmpeg and yt-dlp.
+
+:::note
+The `install` command is currently **not supported on macOS**. macOS users should install dependencies manually.
+:::
+
+**Examples:**
+
+Install both FFmpeg and yt-dlp:
+```bash
+clispot install
+```
+
+Install only yt-dlp:
+```bash
+clispot install --yt-dlp-only
+```
+
 ### Interface Layout
 
 clispot uses a three-panel layout:

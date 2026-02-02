@@ -11,7 +11,12 @@ Clispot is currently in early development. Expect bugs and breaking changes.
 
 **Required:**
 * [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) - YouTube downloader for audio playback
+
 * [`ffmpeg`](https://ffmpeg.org/) - Audio conversion
+
+:::tip
+You can easily install these dependencies using the `clispot install` command (Linux and Windows only). See [Dependency Management](/core/usage#dependency-management) for more details.
+:::
 
 ### Quick Install
 
