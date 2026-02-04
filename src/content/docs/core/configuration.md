@@ -84,9 +84,22 @@ Here is an example of a complete `config.json` file:
   "yt-dlp-args": {
     "cookies-from-browser": "firefox",
     "cookies": "/path/to/cookies.txt"
-  }
+  },
+  "skip-on-no-match": true
 }
 ```
+
+### Configuration Options
+
+*   **`debug-dir`**: Directory where debug logs are stored.
+*   **`cache-dir`**: Directory where downloaded audio files are cached.
+*   **`disable-cache`**: If set to `true`, audio files will not be cached.
+*   **`yt-dlp-args`**: Arguments passed to `yt-dlp` for downloading audio.
+    *   **`cookies-from-browser`**: Use cookies from a specific browser (e.g., "firefox", "chrome").
+    *   **`cookies`**: Path to a cookies file.
+*   **`skip-on-no-match`**: If set to `true` (default), Clispot will automatically play the next song in the queue if the current one cannot be found on YouTube. If `false`, it will just show a toast message indicating the failure.
+
+> **Note:** Sometimes Clispot fails to find a matching song on YouTube. In this case, it shows a toast message. If `skip-on-no-match` is enabled (which is the default), it will automatically proceed to the next track.
 
 ### Configuration Precedence
 
